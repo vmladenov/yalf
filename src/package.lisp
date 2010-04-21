@@ -24,10 +24,29 @@
 
 (in-package :yalf)
 
+(export '(log-message
+	  log-emergency
+	  log-alert
+	  log-critical
+	  log-error
+	  log-warning
+	  log-info
+	  log-notice
+	  log-debug
+	  log-trace
+	  +LOG-EMERGENCY+
+	  +LOG-ALERT+
+	  +LOG-CRITICAL+
+	  +LOG-ERROR+
+	  +LOG-WARNING+
+	  +LOG-NOTICE+
+	  +LOG-INFO+
+	  +LOG-DEBUG+
+	  +LOG-TRACE+))
+
 
 (defgeneric stream-close (obj &key &allow-other-keys))
 (defgeneric log-message (logger level message &key &allow-other-keys))
-
 
 (defgeneric channel-close (channel &key &allow-other-keys))
 (defgeneric channel-write (channel message &key &allow-other-keys))

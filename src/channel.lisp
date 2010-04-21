@@ -11,7 +11,6 @@
 
 (in-package :yalf)
 
-
 (defclass yalf-channel ()
   ((name
     :reader name
