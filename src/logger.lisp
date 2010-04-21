@@ -19,7 +19,8 @@
 #-:sbcl 
 (defvar *timestamp-printer-mutex* nil)
 
-(defvar *timestamp-printer* nil)
+(defvar *timestamp-printer*
+  #'(lambda () (format-timestring nil (now) :format +asctime-format+)))
 
 (defun timestamp-printer (&optional printer)
   (let (oldone)

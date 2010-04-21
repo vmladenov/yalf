@@ -18,7 +18,7 @@
 	   #:channel-close
 	   #:attach-severity
 	   #:attach-channel
-	   #:setup-defaults	  
+	   #:create-default-logger	  
 	   #:log-message
 	   #:log-emergency
 	   #:log-alert

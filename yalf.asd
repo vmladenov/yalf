@@ -16,7 +16,7 @@
 (in-package #:yalf-system)
 
 (defsystem yalf
-  :version "0.0.1"
+  :version "0.0.2"
   :author "Vesselin Mladenov <veselinm@gmail.com>"
   :maintainer "Vesselin Mladenov <veselinm@gmail.com>"
   :licence "BSD License"

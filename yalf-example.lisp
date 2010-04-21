@@ -17,15 +17,15 @@
 
 (in-package :yalf)
 
-(setup-defaults "/tmp/yalf.log" "default logger")
-
-(unwind-protect
-     (progn
-       (channel-open *logger*)
-       (log-message *logger* +LOG-ERROR+ "AAAAAAAAAAAAAAAAAAA")
-       (log-message *logger* +LOG-ERROR+ "Beee maaaani")
-       (log-notice "AAA"))
-  (channel-close *logger*))
+(let ((*logger* 
+       (create-default-logger "/tmp/yalf.log" "default logger")))
+  (unwind-protect
+       (progn
+	 (channel-open *logger*)
+	 (log-message *logger* +LOG-ERROR+ "AAAAAAAAAAAAAAAAAAA")
+	 (log-message *logger* +LOG-ERROR+ "Beee maaaani")
+	 (log-notice "AAA"))
+    (channel-close *logger*)))
 
 
 (sb-ext:quit)

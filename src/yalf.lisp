@@ -26,9 +26,7 @@
 
 
 
-(defun setup-defaults (log-file-name logger-name)
-  (timestamp-printer 
-   #'(lambda () (format-timestring nil (now) :format +asctime-format+)))
+(defun create-default-logger (log-file-name logger-name)
   (let ((logger
 	 (make-instance 'yalf-logger :name logger-name))
 	(channel
@@ -46,8 +44,7 @@
     (attach-severity logger :name "info"      :level 6 :channel-index 0 :long-name "Informational message")
     (attach-severity logger :name "debug"     :level 7 :channel-index 0 :long-name "Debug level message")
     (attach-severity logger :name "trace"     :level 8 :channel-index 0 :long-name "Trace level message")
-    (setq *logger* logger))
-  (values))
+    logger))
 
 
 (declaim (inline log-emergency))
