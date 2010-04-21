@@ -24,7 +24,12 @@
 
 (in-package :yalf)
 
-(export '(log-message
+(export '(channel-open
+	  channel-close
+	  attach-severity
+	  attach-channel
+	  setup-defaults	  
+	  log-message
 	  log-emergency
 	  log-alert
 	  log-critical
@@ -42,7 +47,8 @@
 	  +LOG-NOTICE+
 	  +LOG-INFO+
 	  +LOG-DEBUG+
-	  +LOG-TRACE+))
+	  +LOG-TRACE+
+	  *logger*))
 
 
 (defgeneric stream-close (obj &key &allow-other-keys))
