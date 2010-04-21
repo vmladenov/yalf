@@ -14,31 +14,31 @@
   (:use :common-lisp
 	:trivial-gray-streams
 	:local-time)
-  (:export :channel-open
-	   :channel-close
-	   :attach-severity
-	   :attach-channel
-	   :setup-defaults	  
-	   :log-message
-	   :log-emergency
-	   :log-alert
-	   :log-critical
-	   :log-error
-	   :log-warning
-	   :log-info
-	   :log-notice
-	   :log-debug
-	   :log-trace
-	   :+LOG-EMERGENCY+
-	   :+LOG-ALERT+
-	   :+LOG-CRITICAL+
-	   :+LOG-ERROR+
-	   :+LOG-WARNING+
-	   :+LOG-NOTICE+
-	   :+LOG-INFO+
-	   :+LOG-DEBUG+
-	   :+LOG-TRACE+
-	   :*logger*)
+  (:export #:channel-open
+	   #:channel-close
+	   #:attach-severity
+	   #:attach-channel
+	   #:setup-defaults	  
+	   #:log-message
+	   #:log-emergency
+	   #:log-alert
+	   #:log-critical
+	   #:log-error
+	   #:log-warning
+	   #:log-info
+	   #:log-notice
+	   #:log-debug
+	   #:log-trace
+	   #:+LOG-EMERGENCY+
+	   #:+LOG-ALERT+
+	   #:+LOG-CRITICAL+
+	   #:+LOG-ERROR+
+	   #:+LOG-WARNING+
+	   #:+LOG-NOTICE+
+	   #:+LOG-INFO+
+	   #:+LOG-DEBUG+
+	   #:+LOG-TRACE+
+	   #:*logger*)
   (:documentation "Yet Another Logging Facility"))
 
 
