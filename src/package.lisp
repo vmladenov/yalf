@@ -1,0 +1,43 @@
+;;;;-*- Mode: Lisp; Syntax: ANSI-Common-Lisp; Base: 10 -*-
+;;;;
+;;;; This is the YALF package definition
+;;;;
+;;;; Copyright (C) 2010 Vesselin Mladenov <veselinm@gmail.com>
+;;;;
+;;;; You are granted the rights to distribute and use this software
+;;;; as governed by the terms of the BSD License
+;;;; BSD style license: http://www.opensource.org/licenses/bsd-license.php
+
+(in-package :common-lisp-user)
+
+(defpackage :yalf
+  (:use :common-lisp
+	:trivial-gray-streams
+	:local-time)
+  (:export
+   #:make-subdirectory
+   #:+us-date-format+
+   #:+en-duration-unit-names+)
+  (:documentation "Yet Another Logging Facility"))
+
+
+
+(in-package :yalf)
+
+
+(defgeneric stream-close (obj &key &allow-other-keys))
+(defgeneric log-message (logger level message &key &allow-other-keys))
+
+
+(defgeneric channel-close (channel &key &allow-other-keys))
+(defgeneric channel-write (channel message &key &allow-other-keys))
+(defgeneric channel-open (channel &key &allow-other-keys))
+(defgeneric channel-flush (channel &key &allow-other-keys))
+
+(defgeneric attach-channel (logger channel &key &allow-other-keys))
+(defgeneric attach-severity (logger &key &allow-other-keys))
+
+
+;;;; Local Variables:
+;;;; mode: lisp
+;;;; End:

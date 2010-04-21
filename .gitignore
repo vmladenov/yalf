@@ -1,0 +1,27 @@
+#
+# Normal rules
+#
+.*
+*.o
+*.o.*
+*.a
+*.s
+*.ko
+*.so
+*.so.dbg
+*.mod.c
+*.i
+*.lst
+*.symtypes
+*.order
+*.elf
+*.bin
+*.gz
+*.lzma
+*.patch
+*.gcno
+*~
+.*~
+test/
+.gitignore
+yalf.sh
